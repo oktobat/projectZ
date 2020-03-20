@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>경희대학교</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/join.css">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <!--[if lt IE 9]>
+         <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/myscript.js"></script>
+</head>
+<body>
+
+<div id="commHeader"></div>
+    
+
+<div id="joinBox">
+    <div class="subTbox">
+        <h2>회원가입</h2>
+    </div>
+    <div class="inner row">
+        <h3>회원가입</h3>
+        <div class="joinContent">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>기본정보</legend>
+                    <table>
+                        <colgroup>
+                            <col class="col1">
+                            <col class="col2">
+                        </colgroup>
+                        <tr>
+                            <th>
+                                <label for="idinfo">아이디</label>
+                            </th>
+                            <td>
+                                <input type="text" id="idinfo" name="idinfo" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="pwinfo">비밀번호</label>
+                            </th>
+                            <td>
+                                <input type="password" id="pwinfo" name="pwinfo" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="irum">이름</label>
+                            </th>
+                            <td>
+                                <input type="text" id="irum" name="irum">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">
+                                <label for="zipcode"">주소</label>
+                            </th>
+                            <td>
+                                <input type="text" id="zipcode" name="zipcode" readonly>
+                                <button type="button" id="zipbtn">우편번호</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="addr1" id="addr1" readonly>기본주소
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="addr2" id="addr2">나머지주소(선택입력가능)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="telecom">휴대전화</label></th>
+                            <td>
+                                <select name="telecom" id="telecom">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select> - 
+                                <input type="text" name="hp1" id="hp1"> -
+                                <input type="text" name="hp2" id="hp2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="sms">SMS수신여부</label></th>
+                            <td>
+                                <input type="checkbox" id="sms" name="sms"> 동의함
+                                <p>쇼핑몰에 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="email">이메일</label></th>
+                            <td>
+                                <input type="text" name="email" id="email"> @
+  								<input type="text" name="emailcom" id="emailcom">
+  								<select name="emaillist" id="emaillist">
+  									<option>- 이메일선택 -</option>
+  									<option value="naver">naver.com</option>
+  									<option value="daum">daum.net</option>
+  									<option value="nate">nate.com</option>
+  									<option value="useremail">직접입력</option>
+  								</select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="emailyes">이메일수신여부</label></th>
+                            <td>
+                                <input type="checkbox" name="emailyes" id="emailyes"> 동의함
+  								<p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>추가정보</legend>
+                    <table>
+                        <colgroup>
+                            <col class="col1">
+                            <col class="col2">
+                        </colgroup>
+                            <tr>
+                                <th><label for="man">성별</label></th>
+                                <td>
+                                <input type="radio" name="gender" id="man" value="man">
+                                <label for="man"> 남자</label>
+                                <input type="radio" name="gender" id="woman" value="woman">
+                                <label for="woman"> 여자</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="birth_y">생년월일</label></th>
+                                <td>
+                                <input type="text" name="birth_y" id="birth_y"> 년
+                                <input type="text" name="birth_m" id="birth_m"> 월
+                                <input type="text" name="birth_d" id="birth_d"> 일
+                                <input type="radio" name="pm" id="plus" value="양력">
+                                <label for="plus">양력</label>
+                                <input type="radio" name="pm" id="minus" value="음력">
+                                <label for="minus">음력</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="local">지역</label></th>
+                                <td>
+                                    <select name="local" id="local">
+                                        <option>선택</option>
+                                        <option value="서울">서울</option>
+                                        <option value="경기도">경기도</option>
+                                        <option value="강원도">강원도</option>
+                                        <option value="제주도">제주도</option>
+                                    </select>  								
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="inter1">관심분야</label></th>
+                                <td>
+                                <input type="checkbox" name="inter1" id="inter1">
+                                <label for="inter1">포토샵&nbsp;&nbsp;&nbsp;</label>
+                                <input type="checkbox" name="inter2" id="inter2">
+                                <label for="inter2">일러스트&nbsp;&nbsp;&nbsp;</label>
+                                <input type="checkbox" name="inter3" id="inter3">
+                                <label for="inter1">HTML&nbsp;&nbsp;&nbsp;</label>
+                                <input type="checkbox" name="inter4" id="inter4">
+                                <label for="inter4">CSS&nbsp;&nbsp;&nbsp;</label>
+                                <input type="checkbox" name="inter5" id="inter5">
+                                <label for="inter5">JavaScript</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="memo">메모</label></th>
+                                <td>
+                                <textarea name="memo" id="memo" cols="60" rows="5" maxlength="10" placeholder="메모를 남겨주세요!!"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                </fieldset>
+                <h4>이용약관 동의</h4>
+  				<div class="guide">
+  					<div class="guidecontent">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, vitae, sed! Culpa, accusamus, excepturi, velit incidunt eaque, voluptas repellendus qui beatae libero dolorem praesentium tempora veniam vel eligendi soluta maiores.  		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur placeat expedita nemo, delectus officiis culpa impedit pariatur quibusdam aspernatur aut id accusamus, error velit. Quae totam quisquam accusamus hic, accusantium.		
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia autem asperiores reiciendis ducimus iure velit facere odit nisi dignissimos quos cum delectus cumque inventore, nostrum! Cumque unde velit rem.		
+  					</div>
+  					이용약관에 동의하십니까? 
+  					<input type="checkbox" name="gyes" id="gyes" required><label for="gyes">동의함</label>
+  				</div>
+  				
+  				<h4>개인정보수집 및 이용동의</h4>
+  				<div class="guide">
+  					<div class="guidecontent">
+						개인정보수집 및 이용동의 내용입니다. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat facilis esse rem dolore ex eum, mollitia explicabo perspiciatis unde molestias quam voluptatem perferendis laboriosam, optio amet quo harum nam tempore?
+                        Aliquid esse iusto iste cum nam delectus, quos, incidunt aut quibusdam, pariatur est vitae explicabo aspernatur sapiente minima quia saepe excepturi qui. Aspernatur soluta voluptatem nostrum dolores, repellendus fugiat quia.
+                        Rem, voluptatem unde. Tenetur deserunt voluptatem at debitis ratione magnam consequatur est praesentium inventore quod enim reiciendis tempore cupiditate sequi quo, saepe adipisci laboriosam quam distinctio eveniet mollitia nisi odio.
+                        Dignissimos sequi architecto repudiandae doloribus vel neque sit eligendi consequuntur odit corporis, consectetur veniam eum aperiam reprehenderit dolorum. Possimus, totam et quidem voluptates iusto eligendi dignissimos laudantium amet sit debitis.
+                        Porro eos laudantium, ducimus, optio eius a eaque ipsum corporis beatae esse maiores! Quos sunt fugit architecto perspiciatis similique libero. Ipsam ducimus qui molestias! Quaerat cum magnam animi accusamus laboriosam.
+                        Voluptatum quod obcaecati assumenda est odio adipisci tenetur, iure vel quos repellat eum officiis vero, enim totam debitis nostrum! Enim officia qui minus dolor aperiam officiis assumenda corrupti? Quod, fuga!
+                        Incidunt qui voluptatum neque ad repellendus cupiditate officiis ipsam, beatae aspernatur iusto cumque explicabo corrupti vitae tempora dicta similique hic maiores debitis odit fugiat optio doloribus, illum iure! Labore, dignissimos.
+                        Fugiat, minus dolorum ad maiores distinctio nisi rerum. Fuga sapiente quisquam, optio accusantium itaque, voluptas obcaecati totam perferendis consequatur cum, iusto iste explicabo cumque delectus voluptates sunt! Maiores, distinctio vitae.
+                        Quaerat ipsam voluptates aliquam aperiam illum nemo, magni cupiditate nobis et provident. Mollitia in illo, unde enim placeat assumenda obcaecati sed? Inventore quibusdam velit nostrum sunt similique, ipsam est id.
+                        Ut eius eos ratione amet debitis, nostrum id molestiae sunt reiciendis deleniti cupiditate voluptatem suscipit dolorum eveniet pariatur at iste quidem. Totam, fugiat officiis minima eligendi iste cumque. Ad, iste!
+                        Iusto, est, alias commodi voluptatibus culpa quae fugiat vitae corporis consequatur rem consectetur neque. Reprehenderit quas error ea dignissimos nobis porro saepe optio. Voluptatum, id! Placeat eum vitae quia mollitia?
+                        Ad, perspiciatis sed sunt molestiae id suscipit dolores labore nemo voluptatem. Dignissimos, eveniet inventore! Incidunt possimus doloremque assumenda. Corporis nam suscipit repellat nesciunt expedita, quia quaerat quidem consectetur harum eius?
+                        Iusto sequi atque cum laborum vero! Voluptatibus quam molestias dolor! Praesentium distinctio eveniet inventore porro, deserunt laudantium minima! Nulla iusto quisquam commodi omnis natus libero itaque provident nostrum aliquid illo.
+                        At rem, assumenda voluptatum vel officia error, consectetur quod quisquam hic, neque laborum accusantium ex. Ipsum illo fugiat non neque incidunt explicabo tempora, voluptatum commodi eligendi numquam veniam unde adipisci.
+                        Maiores, veniam ipsam cupiditate ipsum omnis, magni consequuntur libero ex totam aliquam maxime deserunt eum sint necessitatibus magnam, iure atque nam perspiciatis similique voluptates repellat? Ratione quo saepe voluptates illum.
+                        Hic commodi facere, et quidem ea, ipsum omnis in, amet iure dolorum repellat? Ducimus commodi facere veritatis itaque illum in dolores minus! Voluptatum itaque, explicabo dolore ipsam quaerat omnis numquam!
+                        Cupiditate officia ea ipsum! Eum harum porro vel doloremque dolores culpa labore ullam at corrupti, autem neque corporis! Eveniet porro ducimus veniam dolor maiores totam aut veritatis fugit vero suscipit.
+                        Veniam reiciendis quas amet tempora beatae, repudiandae voluptas impedit voluptatum nihil magnam aperiam facere adipisci sapiente animi quo dolorem corporis quis earum nesciunt alias quia? Minus, nesciunt animi. Minima, dolores.
+                        Aliquam ratione voluptate consectetur molestias, qui illo nobis debitis voluptatum magnam, perspiciatis doloribus dolores nemo! Nulla beatae, illum harum, repudiandae repellat tempore quae sed est, corporis ad laborum consequuntur doloribus.
+                        Natus numquam deserunt voluptate explicabo possimus debitis soluta blanditiis excepturi dicta! Assumenda nobis tempore deserunt inventore dolore eaque eos autem, dolores odit tempora, voluptas laudantium voluptatibus ad hic quo atque?
+  					</div>
+  					개인정보 수집 및 이용에 동의하십니까?
+  					<input type="checkbox" name="pyes" id="pyes" required><label for="pyes">동의함</label>
+  				</div>
+  				
+  				
+  				<div class="btn">
+					<input type="submit" value="전송">
+					<input type="reset" value="취소">
+  				</div>
+            </form>
+        </div>
+    </div>
+</div>
+ 
+
+<div id="commFooter"></div>
+
+
+</body>
+</html>

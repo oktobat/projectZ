@@ -1,0 +1,37 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+/* font-family: 'Roboto', sans-serif; 
+font-family: 'Merriweather', serif; */
+
+* { margin:0; padding:0; box-sizing:border-box; }
+.cf:after, .cf:before {
+    content:''; 
+    display:block;
+    clear:both; }
+a { color:inherit; text-decoration: none }
+img { border:none; max-width:100%; 
+    vertical-align:middle }
+ol, ul { list-style: none }
+table { border-collapse:collapse; 
+    table-layout:fixed; width:100%  }
+fieldset { border:none }
+legend, caption { display:none }
+.blind { text-indent:-99999px; font-size:0px; position:absolute; width:0; height:0; overflow:hidden; line-height:0 }
+h1, h2, h3, h4, h5, h6 { 
+    font-weight:normal; font-size:100%
+}
+header, section, footer, article, aside, 
+figure, video, audio, nav { display:block }
+strong, em { font-weight:normal; font-style:normal }
+button, input[type=submit], input[type=reset] {
+    cursor:pointer; background:none; border:none }
+
+
+html { font-size:62.5%; overflow-x:hidden; width:100%}
+body { font-size:16px; 
+    font-family: 'Roboto', sans-serif; 
+    color:#555; }
+.row { max-width:1240px; margin:0 auto }
+.pc { display:block; }
+.mobile { display:none; }

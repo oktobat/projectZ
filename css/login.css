@@ -1,0 +1,26 @@
+#loginBox { padding-bottom:120px }
+.subTbox { height:230px; 
+    background:url("../images/bgSubTit07.jpg") no-repeat center/cover; }
+.subTbox h2 { 
+    font-size:41px; 
+    color:#fff;
+    text-align:center;
+    line-height:230px; }    
+#loginBox h3 {padding:50px 0px 40px; 
+    font-size:30px; color:#333 }
+#loginBox .info { font-size:15px; color:#555;
+    padding-bottom:17px }
+
+#loginBox .cBox { padding:67px 0px; 
+        border: 1px solid #ccc;
+        margin-top:30px; text-align:center }    
+#loginBox .idpw { display:inline-block;  }
+#loginBox .idpw label { display:inline-block; 
+    width:80px; text-align:left; 
+    font-size:14px; color:#555 }
+#loginBox .idpw input { width:220px; height:40px; 
+    text-indent:10px }
+#loginBox .idpw p { margin-bottom:10px }
+#loginBox .cBox button { width:100px; height:90px;
+    background:#d7a462; color:#fff;
+    margin-left:10px; vertical-align:top }

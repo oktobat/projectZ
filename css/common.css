@@ -1,0 +1,360 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+/* font-family: 'Roboto', sans-serif; 
+font-family: 'Merriweather', serif; */
+
+/* header 구역 스타일 시작 */
+.depth3 { display:none; }
+.skip > a { position:absolute; left:-100% }
+.skip > a:focus { display:block; width:100%; 
+    height:30px; line-height:30px;
+    background:#920400; color:#fff;
+    text-align:center; left:0; z-index:99999 }
+
+.headWrap  { position:relative; padding-top:52.5px }
+.headWrap h1 { position:absolute; top:0; 
+    left:50%; transform:translate(-50%); z-index:9999 }    
+.headWrap h1 .mlogo { display:none }  
+.mopen, .mclose { display:none }
+
+.topW { background:#990E17; font-size:14px; 
+    position:absolute; top:0; right:0; 
+    width:100% }
+.hleft > li { float:left; color:#d9c1c1; 
+    padding:17px 20px 17px 0px; transition:all 0.4s;
+    letter-spacing:-0.5px;  }
+.hleft > li:hover { color:#fff;
+    text-decoration:underline;  }
+
+.topW .row { position:relative }   
+.hright { position:absolute; top:17px; right:40px   /*230px;*/  }
+.hright a { padding-left:20px; color:#ccab52; transition:all 0.4s }
+.hright a:hover { color:#ffd669 }
+.hright a:nth-child(3) {
+    background:#840d13; 
+    border:1px solid #730000;
+    color:#f3767e; padding:7.5px 15px;
+    margin-left:20px; transition:all 0.4s;
+}
+.hright a:nth-child(3):hover { color:#fff }
+.search { position:absolute; top:10px; right:50%; margin-right:-620px; z-index:999999 }
+.search input[type=text] { width:0px; /* 180px */ height:32px; 
+    background:#730000; border:none; 
+    text-indent:10px; color: #d9c1c1; opacity:0; 
+    overflow:hidden }
+.search ::placeholder { color: #d9c1c1;}
+.search button { 
+    border:1px solid #730000; 
+    vertical-align:top;
+    width:32px; height:32px;
+    background:url(../images/icoSearch.png) no-repeat rgb(132, 13, 19) }
+
+.menuW .gnbL { float:left; width:42%; }
+.menuW .gnbR { float:right; width:42%; }
+.menuW .gnb > li { float:left; width:33.33%;
+    text-align:center; font-size:19px; color:#262121; height:86px; line-height:86px;  
+    font-weight:bold; position:relative }
+.menuW .gnb > li > a { display:block }
+.menuW .gnb > li:hover {color:#a40f16 }
+
+.submenu { position:absolute; top:86px; 
+    left:0; width:100%; height:290px;
+    padding-top:15px; display:none;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    z-index:9999; }
+.menuW .gnb > li:nth-child(1) > .submenu {
+    border-left: 1px solid rgba(0, 0, 0, 0.25)
+}
+.menuW .gnb > li:hover > .submenu {
+    background:rgba(179, 16, 27, 1);
+}
+.submenu.on { display:block }
+
+.submenu > li { font-size:16px;
+    height:42px; line-height:42px; 
+    color:#fff; }  
+.submenu > li.on { 
+    background:#fff;
+    color:#990E17 }     
+.submenu > li > a { display:block; }    
+
+.menuW { position:relative }
+.decoBox { width:100%; height:290px; 
+    background:rgba(179, 16, 27, 0.85);
+    position:absolute; top:86px; left:0; 
+    display:none;  z-index:999}
+.decoBox.on { display:block; }
+.decoBox > .imgbox { 
+    position:absolute; top:0; left:50%;
+    transform:translate(-50%);
+    height:290px; width:200px; 
+    text-align:center; 
+    background:rgba(179, 16, 27, 1); }
+.decoBox > .imgbox > img {
+    margin-top:100px }    
+/* header 구역 스타일 끝 */
+
+
+
+
+/* 푸터구역 스타일 시작 */
+#footer { width:100%; background:#2e2d34; font-size:14px; }
+.footMenu { width:100%; border-bottom:1px solid #58575d; border-top:1px solid #17161a; }
+.footMenu .container {  max-width:1240px;  margin:0 auto; }
+#footer .footInfo { max-width:1240px; margin:0 auto; }
+.termsList { float:left }
+.termsList > li { float:left }
+.termsList > li > a { color:#6c6c6e; 
+    padding:15px 34px 17px; display:block;
+    position:relative; transition:all 0.4s; }
+.termsList > li:hover > a { color:#eee;}
+.termsList > li:first-child > a { padding-left:0px; }
+.termsList > li > a:after { content:''; width:1px; height:10px; background:#434249;
+    position:absolute; left:0px; top:50%; margin-top:-5px; }
+.termsList > li:first-child > a:after { display:none }
+.footLinkW { float:right }
+.footLinkW > .footLinks { float:left; position:relative }
+.footLinkW > .footLinks > .btnLinks { display:block;
+    width:220px; padding:15px 0px 17px 30px; color:#999;
+    border-right:1px solid #434348; background:url(../images/icoArrLinkUp.png) no-repeat 190px center; }
+.footLinkW > .footLinks > .btnLinks.on { color:#eee;
+    background:url(../images/icoArrLinkDown.png) no-repeat 190px center; }
+.footLinkW > .footLinks:first-child > .btnLinks { border-left:1px solid #434348; }
+.linkList { background:#2e2d34; border:1px solid #434348;
+    padding:10px; position:absolute; bottom:50.67px; left:0px;
+    width:100%; display:none; z-index:9999; }
+.linkList > li > a { display:block; color:#6c6c6c;
+    line-height:1.5em; }
+/* .footLinkW > .footLinks:hover > .linkList { display:block } */
+.footLogo { position:absolute; top:22px; left:0 }
+.footInfo { position:relative }
+.footAdd { float:right; position:relative; 
+    padding:22px 0px 73px 180px; color:#7b7b7d }
+.footAdd .snsList { position:absolute; right:0px; bottom:23px  }
+.snsList > li { float:left; margin-left:10px; }
+.snsList > li > a { display:block; width:36px; height:36px; 
+    border-radius:50%; background:#43424a; }
+.snsList > li:hover > a { background:#242327 }
+.snsList > li > a > img { padding:5px;  }
+/* 푸터구역 스타일 끝 */
+
+
+@media screen and (max-width:1239px) {
+    /* header 구역 스타일(1239이하) 시작 */
+    .row { padding-left:16px; padding-right:16px }  
+    .pc { display:none; }
+    .mobile { display:block; }
+    .headWrap  { position:fixed;    
+        width:100%; z-index:9999;    
+        overflow-y:auto; 
+        /* height:100%;   */
+        overflow-x:hidden;
+    } 
+    .headWrap h1 { position:absolute; top:0;
+        width:100%;
+        background:#990e17;
+        left:0%; transform:translate(0%); z-index:9999 }    
+    .headWrap h1 .mlogo { width:156px; display:inline-block;  }  
+    .mopen, .mclose { display:none;
+        position:absolute; right:10px; top:13px;
+        background:none; border:none; 
+        width:20px; height:20px;
+        z-index:99999;
+    }
+    .mopen { display:block; }
+    .mopen span { display:block; width:17px;
+        height:2px; background:#fff;
+        border-radius:1px; margin-top:4px; 
+    }
+    .mclose span {
+        display:block; position:absolute; top:11px; left:0;
+        width:20px; height:2px; background: #ffffff;
+        border-radius:1px; }
+    .mclose span:nth-of-type(1) {
+        transform:rotate(45deg); 
+    }
+    .mclose span:nth-of-type(2) {
+        transform:rotate(-45deg); 
+    }
+    
+    .hleft { height:48px; padding-left:17px; 
+        border-top:1px solid #ab1a23;
+        background:#8c0911;  }
+    
+    .topW .row { position:static; padding-left:0px; padding-right:0px }   
+    .hright { position:static; background:#8c0911;  }
+    .hright a { padding-left:0px;
+        color:#ed9da1; transition:all 0.4s;
+        float:left; width:50%; height:50px; 
+        line-height:50px; text-align:center; 
+        font-size:14px; border-top:1px solid #ab1a23 }
+    .hright a:hover { color:#ffd669 }
+    .hright a:nth-child(3) { background:#2d2d2d; 
+        border:0px solid #730000;
+        color:#fff; padding:0px; 
+        margin-left:0px; transition:all 0.4s;
+        width:100%; height:51px; line-height:51px;  }
+    .hright a:nth-child(1) {
+        border-right:1px solid #ab1a23;  }
+        
+    .search { position:absolute; top:10px; right:40px; margin-right:0px;
+        z-index:99999;  }
+    .search button { 
+        border:0px solid #730000; 
+        vertical-align:top;
+        width:32px; height:32px;
+        background:#990e17 url(../images/micoSearch.png) no-repeat;
+        background-size:17px;
+        background-position:center;
+    }
+    
+    .menuW .gnbL { float:left; width:100%; }
+    .menuW .gnbR { float:left; width:100%; }
+    .menuW .gnb > li { float:left; width:100%;
+        text-align:left; font-size:17px; color:#fff; 
+        height:auto; line-height:51px;  
+        font-weight:bold; position:relative;
+        border-top:1px solid #ab1a23; 
+        background:url(../images/gnbDepth1down.jpg) no-repeat right center;
+        background-size:51px;
+    }
+    
+    .menuW .gnb > li > a { display:block; padding-left:16px; }
+    .menuW .gnb > li:hover > a {color:#fff;}
+    .menuW .gnb > li > a.on {color:#222;
+        background:#fff url(../images/gnbDepth1up.jpg) no-repeat right center;
+        background-size:51px; 
+    }
+    
+    .submenu { position:static; /*  */
+        /* top:86px; left:0;  */
+        width:100%; height:auto;
+        padding-top:0px; display:none;
+        border-right: 0px solid rgba(0, 0, 0, 0.25);
+        z-index:9999; 
+        background:#fff; 
+        }
+    .submenu.on { display:block }
+    .menuW .gnb > li:nth-child(1) > .submenu {
+        border-left: 0px solid rgba(0, 0, 0, 0.25)
+    }
+    .menuW .gnb > li:hover > .submenu {
+        background:#fff; 
+    }
+    /* .menuW .row:hover .submenu { display:none } */
+    
+    .submenu > li { font-size:15px;
+        height:auto; /* 3단계 메뉴때문에 */
+        line-height:50px; 
+        color:#7e4649; 
+        border-top:1px solid #ddd;
+        background:url(../images/gnbDepth2down.jpg) no-repeat right center;
+        background-size:50px;
+    }  
+    
+    /* 3단계 메뉴 없는 것들만 공통클래스(dep3no) 삽입해서 
+    화살표 배경이미지 안보이게 처리 */
+    .submenu > li.dep3no { background:none }
+    
+    .submenu > li.on { 
+        background:#fff url(../images/gnbDepth2Up.jpg) no-repeat right top; 
+        background-size:50px; 
+        color:#990E17;
+    }     
+    .submenu > li > a { display:block; 
+        padding-left:32px; margin-right:50px;
+    }    
+    
+    .submenu > li > .depth3.on { display:block }
+    .submenu > li > .depth3 > li > a {
+        display:block; font-size:13px;
+        line-height:50px;
+        color:#888;
+        border-top:1px solid #ddd;
+        padding-left:47px;
+    }
+    .topW { background:none; font-size:14px;
+        position:relative; top:0; right:-100%;
+        width:100%; height:149px;  
+        display:none; }
+    .menuW { position:relative; background:#990e17;
+        right:-100%; display:none; width:100% }
+    .menuW .row { padding-left:0px; padding-right:0px }
+    /* .menuW .row:hover .decoBox { display:none; } */
+    /* header 구역 스타일(1239이하) 끝 */
+
+
+/* 푸터구역 스타일(1239이하) 시작 */
+.termsList { float:left; width:100% }
+.termsList > li { float:left; width:33.33%; }
+.termsList > li > a { color:#6c6c6e; text-align:center;
+    padding:10px 0px 10px; display:block;
+    position:relative; transition:all 0.4s; }
+.termsList > li:hover > a { color:#eee;}
+.termsList > li:first-child > a { padding-left:0px; }
+.termsList > li > a:after {
+    content:''; width:1px; height:10px; background:#434249;
+    position:absolute; left:0px; top:50%;
+    margin-top:-5px; }
+.termsList > li:first-child > a:after { display:none }
+
+
+.footLogo { position:absolute; top:22px; left:20px;
+    width:90px; }
+.footInfo { position:relative }
+.footAdd { float:left; position:relative; width:100%;
+    padding:22px 20px 22px 130px; color:#7b7b7d }
+.footAdd address span { display:block; letter-spacing:-1px }    
+.footAdd .snsList { position:absolute; right:20px; bottom:60px  }
+.snsList > li { float:left; margin-left:10px; }
+.snsList > li > a { display:block; width:25px; height:25px; 
+    border-radius:50%; background:#43424a;
+}
+.snsList > li:hover > a { background:#242327 }
+.snsList > li > a > img { padding:5px;  }
+/* 푸터구역 스타일 끝(1239 이하) */
+
+
+
+    
+}
+    
+        
+        
+@media screen and (max-width:767px) {
+
+/* 푸터구역스타일(767 이하) 시작 */
+.termsList { float:left; width:100% }
+.termsList > li { float:left; width:33.33%; }
+.termsList > li > a { color:#6c6c6e; text-align:center;
+    padding:10px 0px 10px; display:block;
+    position:relative; transition:all 0.4s; }
+.termsList > li:hover > a { color:#eee;}
+.termsList > li:first-child > a { padding-left:0px; }
+.termsList > li > a:after {
+    content:''; width:1px; height:10px; background:#434249;
+    position:absolute; left:0px; top:50%;
+    margin-top:-5px; }
+.termsList > li:first-child > a:after { display:none }
+
+
+.footLogo { position:absolute; top:22px; left:20px;
+    width:90px; }
+.footInfo { position:relative }
+.footAdd { float:left; position:relative; width:100%;
+    padding:22px 20px 22px 130px; color:#7b7b7d }
+.footAdd address span { display:block; letter-spacing:-1px }    
+.footAdd .snsList { position:absolute; right:20px; bottom:60px  }
+.snsList > li { float:left; margin-left:10px; }
+.snsList > li > a { display:block; width:25px; height:25px; 
+    border-radius:50%; background:#43424a;
+}
+.snsList > li:hover > a { background:#242327 }
+.snsList > li > a > img { padding:5px;  }
+/* 푸터구역스타일(767 이하) 끝 */
+
+
+}
+
